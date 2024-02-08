@@ -1,0 +1,25 @@
+{
+  "name": "quasar-app-extension-ext",
+  "version": "0.0.4",
+  "description": "A Quasar Project",
+  "author": "Tobias Mesquita <tobias.mesquita@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "homepage": "",
+  "engines": {
+    "node": ">= 12.2.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "dependencies": {
+    "lib": "0.0.4"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "workspaces": [
+      "lib",
+      "app",
+      "ext"
+    ],
+    "scripts": {
+      "app": "yarn workspace app quasar dev",
+      "lib": "yarn workspace lib vite",
+      "lib:build": "yarn workspace lib build",
+      "postinstall": "yarn lib:build"
+    }
+  }
