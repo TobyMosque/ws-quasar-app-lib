@@ -18,5 +18,6 @@ const myPassword = ref<MyInputPasswordType>()
 
 onMounted(() => {
   console.log({ myText, myPassword })
+  myPassword.value?.focus()
 })
 </script>
