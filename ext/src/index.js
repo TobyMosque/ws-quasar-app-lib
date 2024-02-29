@@ -4,7 +4,6 @@
  *
  * Docs: https://quasar.dev/app-extensions/development-guide/index-api
  */
-
 export default function (api) {
   if (api.hasVite) {
     api.extendViteConf((viteConf, { isClient, isServer }, api) => {
@@ -19,6 +18,8 @@ export default function (api) {
       viteConf.optimizeDeps.include.push('lib');
       if (Array.isArray(viteConf.build.commonjsOptions.include)) {
         viteConf.build.commonjsOptions.include.unshift(/lib/);
+        viteConf.build.commonjsOptions.include.unshift(/lib[\\/]dist[\\/]components/);
+        viteConf.build.commonjsOptions.include.unshift(/lib[\\/]dist[\\/]types/);
 
         const index = viteConf.build.commonjsOptions.include.indexOf(/node_modules/);
         if (index != -1) {
@@ -26,7 +27,6 @@ export default function (api) {
         }
         viteConf.build.commonjsOptions.include.unshift(/node_modules/);
       }
-
     })
   }
 }

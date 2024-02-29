@@ -17,7 +17,7 @@
     "@quasar/extras": "^1.16.4",
     "pinia": "^2.0.11",
     "quasar": "^2.6.0",
-    "quasar-app-extension-ext": "^0.0.4",
+    "quasar-app-extension-ext": "^0.0.7",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
   },

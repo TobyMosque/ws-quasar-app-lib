@@ -1,6 +1,6 @@
 {
   "name": "quasar-app-extension-ext",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "description": "A Quasar Project",
   "author": "Tobias Mesquita <tobias.mesquita@gmail.com>",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "yarn": ">= 1.6.0"
   },
   "dependencies": {
-    "lib": "0.0.4"
-  }
+    "lib": "0.0.7"
+  },
+  "devDependencies": {}
 }

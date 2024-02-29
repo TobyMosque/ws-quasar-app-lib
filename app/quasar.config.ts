@@ -5,6 +5,8 @@
 
 
 import { configure } from 'quasar/wrappers';
+import { MyResolver } from 'lib'
+import Components from 'unplugin-vue-components/vite'
 
 export default configure(() => {
   return {
@@ -72,7 +74,10 @@ export default configure(() => {
       // distDir
       // extendViteConf (viteConf) {},
       // viteVuePluginOptions: {},
-      vitePlugins: []
+      vitePlugins: [Components({
+        dts: 'src/types/generated/components.d.ts',
+        resolvers: [MyResolver()]
+      })]
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer

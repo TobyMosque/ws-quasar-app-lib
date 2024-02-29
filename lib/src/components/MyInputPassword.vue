@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import MyInput from 'components/MyInput.vue'
-import type { MyInputType } from 'types/MyInput'
+import type { MyInput as MyInputType } from 'types/MyInput'
 import type { MyInputPasswordProps, MyInputPasswordSlots } from 'types/MyInputPassword'
 
 const input = ref<MyInputType>()

@@ -10,7 +10,10 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "WsQuasarLibrary",
-      fileName: "ws-quasar-lib",
+      fileName: (format, entry) => {
+        const ext = format === 'es' ? 'js' : 'cjs'
+        return entry + '.' + ext 
+      },
     },
     rollupOptions: {
       external: ["vue", "pinia", "quasar"],
