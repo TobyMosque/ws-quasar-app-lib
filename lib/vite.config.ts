@@ -8,7 +8,13 @@ export default defineConfig({
   plugins: [vue(), dts({ outDir: './dist/types' })],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
+      entry: {
+        components: resolve(__dirname, "src/components/index.ts"),
+        composables: resolve(__dirname, "src/composables/index.ts"),
+        resolvers: resolve(__dirname, "src/resolvers/index.ts"),
+        types: resolve(__dirname, "src/types/index.ts"),
+      },
+      
       name: "WsQuasarLibrary",
       fileName: (format, entry) => {
         const ext = format === 'es' ? 'js' : 'cjs'
@@ -30,7 +36,8 @@ export default defineConfig({
     alias: {
       'src': resolve(__dirname, 'src'),
       'components': resolve(__dirname, 'src/components'),
-      'stores': resolve(__dirname, 'src/stores'),
+      'composables': resolve(__dirname, 'src/composables'),
+      'resolvers': resolve(__dirname, 'src/resolvers'),
       'types': resolve(__dirname, 'src/types'),
     }
   }

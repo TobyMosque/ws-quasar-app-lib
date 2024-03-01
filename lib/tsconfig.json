@@ -22,7 +22,8 @@
     "paths": {
       "src/*": ["./src/*"],
       "components/*": ["./src/components/*"],
-      "stores/*": ["./src/stores/*"],
+      "composables/*": ["./src/composables/*"],
+      "resolvers/*": ["./src/resolvers/*"],
       "types/*": ["./src/types/*"],
     }
   },

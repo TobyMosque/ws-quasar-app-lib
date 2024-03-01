@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { ref,onMounted } from 'vue';
-import type { MyInput, MyInputPassword } from 'lib';
+import type { MyInput, MyInputPassword } from 'lib/types';
 
 const text = ref('xpto')
 const password = ref('xpto')

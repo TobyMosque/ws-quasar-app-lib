@@ -9,8 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     EssentialLink: typeof import('./../../components/EssentialLink.vue')['default']
     ExampleComponent: typeof import('./../../components/ExampleComponent.vue')['default']
-    MyInput: typeof import('lib')['MyInputComp']
-    MyInputPassword: typeof import('lib')['MyInputPasswordComp']
+    MyInput: typeof import('lib/components')['MyInput']
+    MyInputPassword: typeof import('lib/components')['MyInputPassword']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

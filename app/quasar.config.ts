@@ -4,8 +4,8 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
 
-import { configure } from 'quasar/wrappers';
-import { MyResolver } from 'lib'
+import { configure } from 'quasar/wrappers'
+import { MyResolver } from 'lib/resolvers'
 import Components from 'unplugin-vue-components/vite'
 
 export default configure(() => {
