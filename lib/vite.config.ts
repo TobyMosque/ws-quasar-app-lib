@@ -1,11 +1,12 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from "vite-plugin-dts";
+import Components from "unplugin-vue-components/vite";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), dts({ outDir: './dist/types' })],
+  plugins: [vue(), dts({ outDir: './dist/types' }), Components({ dts: './src/types/generated.d.ts', types: [] })],
   build: {
     lib: {
       entry: {

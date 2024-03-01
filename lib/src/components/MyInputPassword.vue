@@ -1,13 +1,12 @@
 <template>
-  <my-input-vue ref="input" v-bind="props">
+  <my-input ref="input" v-bind="props">
     <template v-for="(_, slot) in slotsHotfix" :key="slot" v-slot:[slot]="scope">
       <slot :name="slot" v-bind="scope" :key="slot" />
     </template>
-  </my-input-vue>
+  </my-input>
 </template>
 <script setup lang="ts">
 import { ref } from 'vue'
-import MyInputVue from 'components/MyInput.vue'
 import { useSlotsHotfix } from 'composables/slots'
 import type { MyInput } from 'types/MyInput'
 import type { MyInputPasswordProps, MyInputPasswordSlots } from 'types/MyInputPassword'
